@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Adem Ayem</title>
+    <link rel="stylesheet" href="../components/style.css">
+    <link rel="stylesheet" href="../components/button.css">
+    <link rel="stylesheet" href="../components/table.css">
+    <link rel="stylesheet" href="../components/form.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css' rel='stylesheet'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../assets/images/image 2.png" alt="Logo Kiri" class="logo-left">
+            <img src="../assets/images/logo_ademayem_landscape.png" alt="Logo Kanan" class="logo-right">
+        </div>
+        <ul>
+            <li><a href="../pages/dashboard.html"><img src="../assets/images/dashboard.svg" class="icon">Dashboard</a></li>
+            <li><strong>Makanan</strong></li>
+            <li><a href="../pages/stokmakanan.html"><img src="../assets/images/stok-makanan.svg" class="icon">Stok Makanan</a></li>
+            <li><a href="../pages/stok-bahan-makanan.html"><img src="../assets/images/stok-bahan-makanan.svg" class="icon">Stok Bahan Makanan</a></li>
+            <li><strong>Pegawai</strong></li>
+            <li><a href="../pages/daftar-pegawai.html"><img src="../assets/images/daftar-pegawai.svg" class="icon">Daftar Pegawai</a></li>
+            <li><a href="../pages/absensi-pegawai.html"><img src="../assets/images/absensi-pegawai.svg" class="icon">Absensi Pegawai</a></li>
+            <li><a href="../pages/gaji-pegawai.html"><img src="../assets/images/gaji-pegawai.svg" class="icon">Gaji Pegawai</a></li>
+            <li><a href="../pages/cuti-pegawai-admin.html"><img src="../assets/images/cuti-pegawai.svg" class="icon">Cuti Pegawai</a></li>
+            <li><strong>Transaksi</strong></li>
+            <li><a href="../pages/laporan-pendapatan-harian.html"><img src="../assets/images/laporan-pendapatan-harian.svg" class="icon">Laporan Keuangan</a></li>
+            <li><a href="../pages/tagihan.html"><img src="../assets/images/tagihan.png" class="icon">Tagihan</a></li>
+            <li><a href="../pages/invoices.html"><img src="../assets/images/invoices.svg" class="icon">Invoices</a></li>
+        </ul>
+
+        <div class="user-profile">
+            <img src="../assets/images/fotoprofil.png" alt="Foto Profil" class="profile-pic">
+            <div class="user-info">
+                <p class="user-name">Nama User</p>
+                <p class="user-role">Role User</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-titles">
+                <h2>
+                    <a href="stok-makanan-link">Gaji Pegawai </a>>Tambah Slip Pegawai
+                </h2>
+            </div>            
+            <div class="header-buttons">
+            </div>
+        </header>
+
+        <div class="dashboard-container"></div>
+            <form action="/submit" method="POST" enctype="multipart/form-data" class="food-form">
+                <div class="form-group">
+                    <label for="pegawaiName">Nama Pegawai</label>
+                    <input type="text" id="pegawaiName" name="pegawaiName" placeholder="Masukkan Nama Pegawai" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="pegawaiJabatan">Jabatan</label>
+                    <input type="text" id="pegawaiJabatan" name="pegawaiJabatan" placeholder="Masukkan Jabatan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nohandphonePegawai">No Handphone</label>
+                    <input type="text" id="nohandphonePegawai" name="nohandphonePegawai" placeholder="Masukkan No Handphone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gajipokokPegawai">Gaji Pokok</label>
+                    <input type="text" id="gajipokokPegawai" name="gajipokokPegawai" placeholder="Masukkan Gaji Pokok Pegawai" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tunjanganPegawai">Tunjangan</label>
+                    <input type="text" id="tunjanganPegawai" name="tunjanganPegawai" placeholder="Masukkan Tunjanngan Pegawai" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalGajiPegawai">Total Gaji</label>
+                    <input type="text" id="totalGajiPegawai" name="totalGajiPegawai" placeholder="Masukkan Total Gaji Pegawai" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggalPembayaran">Tanggal Pembayaran</label>
+                    <input type="date" id="tanggalPembayaran" name="tanggalPembayaran" required>
+                </div>                
+            
+                <div class="form-group button-container">
+                    <button type="submit" class="btn btn-secondary">Batalkan</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../table.js"></script>
+</body>
+</html>

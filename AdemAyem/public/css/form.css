@@ -1,0 +1,252 @@
+/* .food-form {
+    flex-direction: column;
+    background-color: white;
+    padding: 20px; 
+    width:fit-content;
+} */
+
+.food-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px; 
+    width: 100%; 
+}
+
+.button-container {
+    display: flex;              
+    justify-content: center;    
+    gap: 10px;                 
+    margin-top: 20px;           
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #CD2A27;
+    color: white;
+    width: 160px;
+    height: 40px;
+    font-family: 'Nunito';
+}
+
+.btn-primary:hover {
+    background-color: #F99998;
+}
+
+.btn-secondary {
+    background-color: #fff;      
+    color: #CD2A27;              
+    border: 1px solid #CD2A27;   
+    width: 160px;                 
+    height: 40px;                
+    font-family: 'Nunito';
+}
+
+.btn-secondary:hover {
+    background-color: #F99998;   
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.image-upload {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 340px; 
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+
+
+.image-upload label {
+    margin-bottom: 10px; 
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    background-color: #F5F5F5; 
+    cursor: pointer; 
+    width: 100%; /* Set width to 100% to match the upload container */
+    height: 264px; /* Keep the same height */
+    overflow: hidden; /* Ensure the image fits within the placeholder */
+}
+
+
+/* .image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; 
+    background-color: #F5F5F5; 
+    cursor: pointer; 
+    width: 100%; 
+    height: 264px; 
+} */
+
+#uploadedImage {
+    width: 100%; /* Ensure the image takes full width of the placeholder */
+    height: 100%; /* Ensure the image takes full height of the placeholder */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    display: none; /* Initially hide the image until it's uploaded */
+}
+
+.image-crop-container {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    overflow: hidden; 
+}
+
+.image-placeholder .icon {
+    font-size: 30px; 
+    color: #8F8888; 
+}
+
+.image-placeholder p {
+    margin-top: 5px;
+    color: #8F8888; 
+    margin: 15px;
+}
+
+.uploaded-image-pegawai {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 20px 0;          
+}
+
+.uploaded-image-pegawai img {
+    width: 300px;           
+    height: auto;            
+    border-radius: 8px;      
+    object-fit: cover;       
+}
+
+.form-group label {
+    width: 150px; 
+    text-align: left;
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group select {
+    flex-grow: 1;
+    height: 40px; /* Uniform height */
+    border: 1px solid #8F8888;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+    font-family: 'Nunito';
+    color: #101010;
+    opacity: 40%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;             
+    border-color: #CD2A27;   
+    background-color: #FFFFFF; 
+}
+
+.stock-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    flex-grow: 1; 
+}
+
+.stock-container input {
+    width: 60px; 
+    box-sizing: border-box; 
+}
+
+.text-separator {
+    font-size: 14px;
+}
+
+input[disabled], button[disabled] {
+    background-color: #fff; 
+    color: #101010;          
+    border: 1px solid #101010; 
+    opacity: 100%;          
+    cursor: not-allowed;    
+}
+
+.form-group h3 {
+    color: #555; 
+    font-size: 12px;
+    font-weight: normal;
+}
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Mengatur tampilan radio button */
+.form-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #101010; 
+    border-radius: 50%; 
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Warna saat radio button dipilih */
+.form-group input[type="radio"]:checked {
+    border-color: #CD2A27; 
+}
+
+.form-group input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #CD2A27; 
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* Mengubah warna border menjadi abu-abu ketika tidak dipilih */
+.form-group input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}

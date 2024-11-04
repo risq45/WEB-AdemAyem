@@ -1,0 +1,185 @@
+* {
+    font-family: 'Nunito', Arial, sans-serif;
+}
+.header-buttons {
+    display: flex; 
+    align-items: center; 
+}
+
+.header-btn {
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; 
+    margin-right: 10px;
+}
+
+.header-btn:hover {
+    background-color: #F99998; 
+}
+
+.header-btn .icon {
+    width: 20px; 
+    height: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #CD2A27;
+    color: white;
+    min-width: 160px; 
+    min-height: 40px;
+    font-family: 'Nunito'; 
+}
+
+.btn-primary .icon {
+    margin-right: 8px; 
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Nunito';
+}
+
+.btn-primary:hover {
+    background-color: #F99998; 
+}
+
+.btn-primary h3 {
+    font-size: 14px;
+    font-weight: 200;
+    margin: 0;
+    color: #fff;
+    font-family: 'Nunito'; 
+}
+
+.button-group{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background-color: #fff; 
+    color: #CD2A27; 
+    border: 1px solid #CD2A27;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-family: 'Nunito'; 
+    flex: 1;
+    position: relative;
+    width: 64px;
+    height: 30px;
+}
+
+.btn-edit:hover {
+    background-color: #F99998; 
+}
+
+.btn-delete {
+    background-color: #CD2A27; 
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-family: 'Nunito'; 
+    flex: 1;
+    position: relative;
+    width: 64px;
+    height: 30px;
+}
+
+.btn-delete:hover {
+    background-color: #F99998; 
+}
+
+.btn-form {
+    background-color: #CD2A27;
+    color: white;
+    width: 160px; 
+    height: 40px;
+    font-family: 'Nunito'; 
+}
+
+.btn-detail {
+    display: inline-block;
+    background-color: #CD2A27; 
+    color: white;              
+    padding: 10px 20px;       
+    border: none;             
+    border-radius: 20px;      
+    font-size: 13px;           
+    cursor: pointer;           
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.btn-detail:hover {
+    background-color: #F99998; 
+}
+
+
+@media (max-width: 600px) {
+    .btn-detail {
+        width: 100%;        
+        padding: 12px;         
+    }
+}
+
+.unduh-ringkasan-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #DD3B38; 
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.unduh-ringkasan-btn:hover {
+    background-color: #BB3330; 
+    width: 100%;
+}
+
+.ringkasan-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0; 
+}
+
+.ringkasan-label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    flex: 1;
+}
+
+.ringkasan-value {
+    color: #333;
+    text-align: right;
+    flex: 1; 
+}
+
+.garis-dash {
+    border: none;
+    border-top: 2px dashed #CBCBCB; 
+    margin: 10px 0; 
+}
+

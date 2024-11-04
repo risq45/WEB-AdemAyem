@@ -1,0 +1,396 @@
+* {
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: #FFFFFF;
+    color: #101010;
+    height: 100vh;
+    width: 250px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;    
+    justify-content: flex-start;
+}
+
+.logo img {
+    object-fit: contain; 
+}
+
+.logo-left {
+    width: 33px; 
+    height: 33px;
+    margin-right: 2px;
+    object-fit: contain; 
+}
+
+.logo-right {
+    width: 80px; 
+    height: 33px; 
+    margin-left: 2px;
+    object-fit: contain; 
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+.sidebar ul li strong {
+    color: #101010;
+    opacity: 40%; 
+}
+.sidebar ul li a {
+    color: #101010;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.sidebar .icon {
+    width: 15px; 
+    height: 15px; 
+    margin-right: 10px; 
+}
+
+.user-profile {
+    position: absolute;
+    bottom: 0; /* Keep it at the bottom of the sidebar */
+    left: 0;
+    width: 100%; /* Make it full width */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; 
+    background-color: #F99998; 
+}
+
+.profile-pic {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px; 
+    margin-left: 15px;
+}
+
+.user-info {
+    flex: 1; 
+    text-align: left; 
+}
+
+.user-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+
+.user-role {
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.header-titles {
+    display: flex;
+    flex-direction: column; 
+}
+
+.header-titles a {
+    text-decoration: none;
+    color: #101010;
+    font-weight: bold;
+}
+
+.header-titles h2 {
+    text-decoration: none;
+    color: #8F8888;
+    font-weight:lighter;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+header h2 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.header-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 20px; 
+    height: 20px;
+}
+
+#dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* .dashboard-container {
+    padding: 20px;
+    background-color: #F5F5F5;
+    flex-grow: 1;
+} */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px; 
+    color: #333;
+    display: flex;
+}
+
+.tables-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+}
+
+.section-container.stok-makanan {
+    flex: 2; 
+}
+
+.section-container.calendar-pegawai {
+    flex: 1; 
+}
+
+.section-container h2 {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stok-makanan .table-container {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.stok-makanan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stok-makanan th, .stok-makanan td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stok-makanan th {
+    background-color: #DD3B38; 
+    font-weight: 500;
+    color: #fff;
+}
+
+.stok-makanan tr:hover {
+    background-color: #f9f9f9; 
+}
+
+.stok-makanan img {
+    width: 100px; 
+    height: auto; 
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #DD3B38;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+tr:hover {
+    background-color: #f9f9f9; 
+}
+
+img {
+    width: 100px; 
+    height: auto;
+}
+.calendar {
+    margin: 20px 0;
+    flex:1;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.calendar h2 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #333;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 10px;
+}
+
+.calendar-grid div {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calendar-grid div.today {
+    background-color: #DDD538;
+    color: white;
+}
+
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    margin-bottom: 20px;
+}
+.calendar-controls h2 {
+    margin-right: auto;
+}
+
+.calendar-controls label {
+    font-weight: bold;
+}
+
+.calendar-controls select {
+    padding: 5px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.calendar-controls select:focus {
+    outline: none;
+    border-color: #007BFF; 
+}
+
+.calendar-controls select option {
+    font-size: 16px;
+}
+
+.laporanpendapatanbulanan {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px; 
+    border-radius: 8px;
+    flex: 1;
+    max-width: 800px; 
+}
+
+.laporanpendapatanbulanan {
+    height: 347px;
+}
+
+.ringkasan {
+    height: 347px;
+}
+
+canvas {
+    width: 600px; 
+    height: 450px; 
+}
+
+.section-container h2 {
+    font-size: 20px; 
+    margin-bottom: 20px; 
+}
+
+.ringkasan {
+    flex: 1;
+}
+
+.ringkasan-content {
+    font-size: 16px;
+    color: #333;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin-top: 20px;
+    width: 500px;
+    height: 347px;
+}
+
+
+.ringkasan-content p {
+    margin: 10px 0;
+}
+
+.no-data {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #666;
+}

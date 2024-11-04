@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../components/login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="login-form">
+            <h1>Masuk Akun</h1>
+            <h3>Selamat datang kembali! Silahkan masuk ke akun anda</h3>
+            <form action="/submit-login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <img src="../assets/images/gmail-logo.svg" alt="gmail-icon">
+                        <div class="separator"></div>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email anda" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <img src="../assets/images/eye.svg" alt="password-icon" id="toggle-password" onclick="togglePasswordVisibility()">
+                        <div class="separator"></div>
+                        <input type="password" id="password" name="password" placeholder="Masukkan password anda" required>
+                    </div>
+                    <a href="#">Lupa password?</a>
+                </div>                
+                <button type="submit" class="btn-login">Masuk</button>
+                
+                <button type="google-auth" class="btn-google">
+                    <img src="../assets/images/google.svg" alt="Google icon" class="google-icon">
+                    Lanjutkan dengan Google
+                </button>
+
+            </form>
+        </div>
+
+        <div class="image-section">
+           <img src="../assets/images/login.png" alt="login">
+        </div>
+    </div>
+
+</body>
+</html>
