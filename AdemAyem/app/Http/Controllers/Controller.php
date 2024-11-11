@@ -10,10 +10,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Routing\Controller as BaseController;
 
-use App\Models\User;
-use App\Models\Makanan;
-use App\Models\Bahanmakanan;
-use App\Models\Pegawai;
+use App\Models\{User, Makanan, Bahanmakanan, Pegawai, Gaji, Cuti};
 
 class Controller extends BaseController
 {
@@ -167,16 +164,109 @@ class Controller extends BaseController
         return view('dashboard/daftarpegawai/editpegawai', compact('pegawai'));
     }
 
+    public function editpegawaipost($id, Request $request){
+        $pegawai = Pegawai::where('id', $id)->first();
+        $pegawai->nama = $request->nama;
+        $pegawai->jabatan = $request->jabatan;
+        $pegawai->hp = $request->hp;
+        $pegawai->save();
+
+        return view('dashboard/daftarpegawai/editpegawai', compact('pegawai'));
+    }
+
     public function absensipegawai(){
         return view('dashboard/pegawai/absensipegawai');
     }
 
     public function gajipegawai(){
-        return view('dashboard/pegawai/gajipegawai');
+        $gaji = Gaji::all();
+
+        return view('dashboard/gajipegawai/gajipegawai', compact('gaji'));
+    }
+
+    public function tambahgajipegawai(){
+        return view('dashboard/gajipegawai/tambahgajipegawai');
+    }
+
+    public function tambahgajipegawaipost(Request $request){
+        $gaji = new Gaji();
+        $gaji->nama = $request->nama;
+        $gaji->jabatan = $request->jabatan;
+        $gaji->hp = $request->hp;
+        $gaji->gajipokok = $request->gajipokok;
+        $gaji->tunjangan = $request->tunjangan;
+        $gaji->tanggal = $request->tanggal;
+        $gaji->save();
+
+        return redirect('/gajipegawai');
+    }
+
+    public function hapusgajipegawaipost($id){
+        $gaji = Gaji::where('id', $id)->first();
+        $gaji->delete();
+
+        return redirect('/gajipegawai');
+    }
+
+    public function editgajipegawai($id){
+        $gaji = Gaji::where('id', $id)->first();
+
+        return view('dashboard/gajipegawai/editgajipegawai', compact('gaji'));
+    }
+
+    public function editgajipegawaipost($id, Request $request){
+        $gaji = Gaji::where('id', $id)->first();
+        $gaji->nama = $request->nama;
+        $gaji->jabatan = $request->jabatan;
+        $gaji->hp = $request->hp;
+        $gaji->gajipokok = $request->gajipokok;
+        $gaji->tunjangan = $request->tunjangan;
+        $gaji->tanggal = $request->tanggal;
+        $gaji->save();
+
+        return view('dashboard/gajipegawai/editgajipegawai', compact('gaji'));
     }
 
     public function cutipegawai(){
-        return view('dashboard/pegawai/cutipegawai');
+        $cuti = Cuti::all();
+
+        return view('dashboard/cutipegawai/cutipegawai', compact('cuti'));
+    }
+
+    public function tambahcutipegawai(){
+        return view('dashboard/cutipegawai/tambahcutipegawai');
+    }
+
+    public function tambahcutipegawaipost(Request $request){
+        $cuti = new Cuti();
+        $cuti->nama = $request->nama;
+        $cuti->mulai = $request->mulai;
+        $cuti->akhir = $request->akhir;
+        $cuti->hari = $request->hari;
+        $cuti->keperluan = $request->keperluan;
+        $cuti->keterangan = $request->keterangan;
+        $cuti->save();
+
+        return redirect('/cutipegawai');
+    }
+
+    public function detailcutipegawai($id){
+        $cuti = Cuti::where('id', $id)->first();
+
+        return view('dashboard/cutipegawai/detailcutipegawai', compact('cuti'));
+    }
+
+    public function editcutipegawaipost($id, Request $request){
+        $cuti = Cuti::where('id', $id)->first();
+        $cuti->nama = $request->nama;
+        $cuti->mulai = $request->mulai;
+        $cuti->akhir = $request->akhir;
+        $cuti->hari = $request->hari;
+        $cuti->keperluan = $request->keperluan;
+        $cuti->keterangan = $request->keterangan;
+        $cuti->save();
+
+        return view('dashboard/cutipegawai/detailcutipegawai', compact('cuti'));
     }
 
     public function laporanpendapatan(){

@@ -61,10 +61,13 @@
         </header>
 
         <div class="dashboard-container"></div>
-        <form action="/submit" method="POST" enctype="multipart/form-data" class="food-form" id="pegawaiForm">
+        <form action="/editpegawaipost/{{ $pegawai->id }}" method="POST" enctype="multipart/form-data" class="food-form" id="pegawaiForm">
             @csrf
             <div class="form-group uploaded-image-pegawai">
-                <img src="../assets/images/pegawai-f-2.svg" alt="image-pegawai-f">
+                <input type="file" id="foodImage" name="foodImage" accept="image/*" style="display: none;" onclick="event.stopPropagation();" onchange="previewImage(event);">
+                <div class="image-placeholder" onclick="document.getElementById('foodImage').click();">
+                    <img id="uploadedImage" src="" alt="Uploaded Food Image" style="display: none; width: 100%; height: auto; border-radius: 8px;">
+                </div>
             </div>
     
             <div class="form-group">
@@ -74,12 +77,12 @@
     
             <div class="form-group">
                 <label for="pegawaiJabatan">Jabatan</label>
-                <input type="text" id="pegawaiJabatan" name="jabatan" placeholder="Commisioner" >
+                <input type="text" id="pegawaiJabatan" name="jabatan" required >
             </div>
     
             <div class="form-group">
                 <label for="nohandphonePegawai">No Handphone</label>
-                <input type="text" id="nohandphonePegawai" name="hp" placeholder="0812345678910" >
+                <input type="text" id="nohandphonePegawai" name="hp" >
             </div>
     
             <div class="form-group button-container">
@@ -117,7 +120,7 @@
         });
 
         const pegData = {
-            imageUrl: "../assets/images/nasigoreng.png", 
+            imageUrl: "{{ asset('/image/pegawai-f-2.svg') }}", 
             name: "{{ $pegawai->nama }}",
             jabatan: "{{ $pegawai->jabatan }}",
             hp: "{{ $pegawai->hp }}",

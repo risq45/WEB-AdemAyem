@@ -16,35 +16,34 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="../assets/images/image 2.png" alt="Logo Kiri" class="logo-left">
-            <img src="../assets/images/logo_ademayem_landscape.png" alt="Logo Kanan" class="logo-right">
+            <img src="{{ asset('image/image 2.png') }}" alt="Logo Kiri" class="logo-left">
+            <img src="{{ asset('image/logo_ademayem_landscape.png') }}" alt="Logo Kanan" class="logo-right">
         </div>
         <ul>
-            <li><a href="/"><img src="../assets/images/dashboard.svg" class="icon">Dashboard</a></li>
+            <li><a href="/"><img src="{{ asset('image/dashboard.svg') }}" class="icon">Dashboard</a></li>
             <li><strong>Makanan</strong></li>
-            <li><a href="/stokmakanan"><img src="../assets/images/stok-makanan.svg" class="icon">Stok Makanan</a></li>
-            <li><a href="/stokbahanmakanan"><img src="../assets/images/stok-bahan-makanan.svg" class="icon">Stok Bahan Makanan</a></li>
+            <li><a href="/stokmakanan"><img src="{{ asset('image/stok-makanan.svg') }}" class="icon">Stok Makanan</a></li>
+            <li><a href="/stokbahanmakanan"><img src="{{ asset('image/stok-bahan-makanan.svg') }}" class="icon">Stok Bahan Makanan</a></li>
             <li><strong>Pegawai</strong></li>
-            <li><a href="/daftarpegawai"><img src="../assets/images/daftar-pegawai.svg" class="icon">Daftar Pegawai</a></li>
+            <li><a href="/daftarpegawai"><img src="{{ asset('image/daftar-pegawai.svg') }}" class="icon">Daftar Pegawai</a></li>
             <li style="background-color: #FDC6C5; padding: 10px; border-radius: 8px;">
                 <a href="/absensipegawai" style="color: #DD3B38; text-decoration: none; font-weight: bold;">
-                    <img src="../assets/images/absensi-pegawai-red.svg" class="icon" alt="Dashboard Icon" style="margin-right: 10px;">
+                    <img src="{{ asset('image/absensi-pegawai-red.svg') }}" class="icon" alt="Dashboard Icon" style="margin-right: 10px;">
                     Absensi Pegawai
                 </a>
             </li>  
-            <li><a href="/gajipegawai"><img src="../assets/images/gaji-pegawai.svg" class="icon">Gaji Pegawai</a></li>
-            <li><a href="/cutipegawai"><img src="../assets/images/cuti-pegawai.svg" class="icon">Cuti Pegawai</a></li>
+            <li><a href="/gajipegawai"><img src="{{ asset('image/gaji-pegawai.svg') }}" class="icon">Gaji Pegawai</a></li>
+            <li><a href="/cutipegawai"><img src="{{ asset('image/cuti-pegawai.svg') }}" class="icon">Cuti Pegawai</a></li>
             <li><strong>Transaksi</strong></li>
-            <li><a href="/laporanpendapatan"><img src="../assets/images/laporan-pendapatan-harian.svg" class="icon">Laporan Keuangan</a></li>
-            <li><a href="/tagihan"><img src="../assets/images/tagihan.png" class="icon">Tagihan</a></li>
-            <li><a href="/invoices"><img src="../assets/images/invoices.svg" class="icon">Invoices</a></li>
+            <li><a href="/laporanpendapatan"><img src="{{ asset('image/laporan-pendapatan-harian.svg') }}" class="icon">Laporan Keuangan</a></li>
+            <li><a href="/tagihan"><img src="{{ asset('image/tagihan.png') }}" class="icon">Tagihan</a></li>
+            <li><a href="/invoices"><img src="{{ asset('image/invoices.svg') }}" class="icon">Invoices</a></li>
         </ul>
 
         <div class="user-profile">
-            <img src="../assets/images/fotoprofil.png" alt="Foto Profil" class="profile-pic">
+            <img src="{{ asset('image/fotoprofil.png') }}" alt="Foto Profil" class="profile-pic">
             <div class="user-info">
                 <p class="user-name">Nama User</p>
-                <p class="user-role">Role User</p>
             </div>
         </div>
     </div>

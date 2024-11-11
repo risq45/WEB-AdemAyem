@@ -26,14 +26,14 @@
             <li><a href="/stokmakanan"><img src="{{ asset('image/stok-makanan.svg') }}" class="icon">Stok Makanan</a></li>
             <li><a href="/stokbahanmakanan"><img src="{{ asset('image/stok-bahan-makanan.svg') }}" class="icon">Stok Bahan Makanan</a></li>
             <li><strong>Pegawai</strong></li>
-            <li style="background-color: #FDC6C5; padding: 10px; border-radius: 8px;">
-                <a href="/daftarpegawai" style="color: #DD3B38; text-decoration: none; font-weight: bold;">
-                    <img src="{{ asset('image/daftar-pegawai-red.svg') }}" class="icon" alt="Dashboard Icon" style="margin-right: 10px;">
-                    Daftar Pegawai
-                </a>
-            </li>             
+            <li><a href="/daftarpegawai"><img src="{{ asset('image/daftar-pegawai.svg') }}" class="icon">Daftar Pegawai</a></li>
             <li><a href="/absensipegawai"><img src="{{ asset('image/absensi-pegawai.svg') }}" class="icon">Absensi Pegawai</a></li>
-            <li><a href="/gajipegawai"><img src="{{ asset('image/gaji-pegawai.svg') }}" class="icon">Gaji Pegawai</a></li>
+            <li style="background-color: #FDC6C5; padding: 10px; border-radius: 8px;">
+                <a href="/gajipegawai" style="color: #DD3B38; text-decoration: none; font-weight: bold;">
+                    <img src="{{ asset('image/gaji-pegawai-red.svg') }}" class="icon" alt="Dashboard Icon" style="margin-right: 10px;">
+                    Gaji Pegawai
+                </a>
+            </li> 
             <li><a href="/cutipegawai"><img src="{{ asset('image/cuti-pegawai.svg') }}" class="icon">Cuti Pegawai</a></li>
             <li><strong>Transaksi</strong></li>
             <li><a href="/laporanpendapatan"><img src="{{ asset('image/laporan-pendapatan-harian.svg') }}" class="icon">Laporan Keuangan</a></li>
@@ -53,7 +53,7 @@
         <header>
             <div class="header-titles">
                 <h2>
-                    <a href="stok-makanan-link">Daftar Pegawai </a>>Tambah Pegawai
+                    <a href="stok-makanan-link">Gaji Pegawai </a>>Tambah Slip Pegawai
                 </h2>
             </div>            
             <div class="header-buttons">
@@ -61,17 +61,8 @@
         </header>
 
         <div class="dashboard-container"></div>
-            <form action="/tambahpegawaipost" method="POST" enctype="multipart/form-data" class="food-form">
+            <form action="/tambahgajipegawaipost" method="POST" enctype="multipart/form-data" class="food-form">
                 @csrf
-                <div class="form-group image-upload">
-                    <input type="file" id="pegawaiImage" name="pegawaiImage" accept="image/*" style="display: none;" onclick="event.stopPropagation();" onchange="previewImage(event);">
-                    <div class="image-placeholder" onclick="document.getElementById('pegawaiImage').click();">
-                        <img id="uploadedImage" src="" alt="Uploaded Pegawai Image" style="display: none; width: 100%; height: auto; border-radius: 8px;">
-                        <span class="icon">+</span>
-                        <p>Tambahkan Foto</p>
-                    </div>
-                </div>
-        
                 <div class="form-group">
                     <label for="pegawaiName">Nama Pegawai</label>
                     <input type="text" id="pegawaiName" name="nama" placeholder="Masukkan Nama Pegawai" required>
@@ -86,6 +77,21 @@
                     <label for="nohandphonePegawai">No Handphone</label>
                     <input type="text" id="nohandphonePegawai" name="hp" placeholder="Masukkan No Handphone" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="gajipokokPegawai">Gaji Pokok</label>
+                    <input type="text" id="gajipokokPegawai" name="gajipokok" placeholder="Masukkan Gaji Pokok Pegawai" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tunjanganPegawai">Tunjangan</label>
+                    <input type="text" id="tunjanganPegawai" name="tunjangan" placeholder="Masukkan Tunjanngan Pegawai" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggalPembayaran">Tanggal Pembayaran</label>
+                    <input type="date" id="tanggalPembayaran" name="tanggal" required>
+                </div>                
             
                 <div class="form-group button-container">
                     <button type="submit" class="btn btn-secondary">Batalkan</button>

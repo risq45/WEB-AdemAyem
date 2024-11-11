@@ -23,8 +23,15 @@ Route::get('/tambahpegawai', [Controller::class, 'tambahpegawai']);
 Route::get('/editpegawai/{id}', [Controller::class, 'editpegawai']);
 
 Route::get('/absensipegawai', [Controller::class, 'absensipegawai']);
+
 Route::get('/gajipegawai', [Controller::class, 'gajipegawai']);
+Route::get('/tambahgajipegawai', [Controller::class, 'tambahgajipegawai']);
+Route::get('/editgajipegawai/{id}', [Controller::class, 'editgajipegawai']);
+
 Route::get('/cutipegawai', [Controller::class, 'cutipegawai']);
+Route::get('/tambahcutipegawai', [Controller::class, 'tambahcutipegawai']);
+Route::get('/detailcutipegawai/{id}', [Controller::class, 'detailcutipegawai']);
+
 Route::get('/laporanpendapatan', [Controller::class, 'laporanpendapatan']);
 Route::get('/tagihan', [Controller::class, 'tagihan']);
 Route::get('/invoices', [Controller::class, 'invoices']);
@@ -43,3 +50,12 @@ Route::post('/editstokbahanmakananpost/{id}', [Controller::class, 'editstokbahan
 
 Route::post('/tambahpegawaipost', [Controller::class, 'tambahpegawaipost']);
 Route::post('/hapuspegawaipost/{id}', [Controller::class, 'hapuspegawaipost']);
+Route::post('/editpegawaipost/{id}', [Controller::class, 'editpegawaipost']);
+
+Route::post('/tambahgajipegawaipost', [Controller::class, 'tambahgajipegawaipost']);
+Route::post('/hapusgajipegawaipost/{id}', [Controller::class, 'hapusgajipegawaipost']);
+Route::post('/editgajipegawaipost/{id}', [Controller::class, 'editgajipegawaipost']);
+
+Route::post('/tambahcutipegawaipost', [Controller::class, 'tambahcutipegawaipost']);
+Route::post('/editcutipegawaipost/{id}', [Controller::class, 'tambahcutipegawaipost']);
+

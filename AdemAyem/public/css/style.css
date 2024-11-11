@@ -121,6 +121,7 @@ body {
 
 
 .main-content {
+    height: 98vh;
     flex-grow: 1;
     margin-left: 250px;
     padding: 20px;
